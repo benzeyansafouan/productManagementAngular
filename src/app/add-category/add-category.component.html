@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a routerLink="" routerLinkActive="active" class="nav-link">Category List</a>
+        </li>
+        </ul>
+</nav>
+<div class="col-md-6 offset-md-3">
+    <h3>Add Category</h3>
+    <form (ngSubmit) ="onSubmit()">
+        <div class="form-group">
+            <label>Category Name</label>
+            <input ng-model="somefield" type="text" class="form-control" id="namecategory" [(ngModel)]= "category.nameCategory" name="namecategory"/>
+            <!-- <span ng-show="!somefield.length">Please enter something!</span> -->
+        </div>
+        <br>
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <span>All Rights Reserved 2021 @BenzeyanSafouan</span>
+        </div>
+      </footer>

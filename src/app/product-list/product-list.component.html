@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a routerLink="" routerLinkActive="active" class="nav-link">Category List</a>
+        </li>
+        <li class="nav-item">
+            <!-- (click)="gotoaddproducts()" -->
+            <!-- routerLink="./addproduct" routerLinkActive="active" -->
+            <a  (click)="gotoaddproducts()"  class="nav-link">Add Product</a>
+        </li>
+        </ul>
+</nav>
+<div class="container">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Product Name</th>
+            <th> Category</th>
+            <th> Action </th>
+        </tr>
+    </thead>    
+    <tbody>
+        <tr *ngFor ="let product of products">
+            <td> {{ product.name_Products }}</td>
+            <td> {{ product.nameCategory }}</td>
+            <td> 
+                <!-- (click) = "updateProduct(employee.id)"
+                (click) = "deleteProduct(employee.id)"
+                (click) = "productDetails(employee.id)" -->
+                <!-- (click)= "updateProduct(name_Products)" -->
+                <button  (click)= "updateProduct(product.name_Products)" class="btn btn-info">Update</button>
+                <button  (click)= "deleteProduct(product.name_Products)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                <button  (click)= "productDetails(product.name_Products)" class="btn btn-primary" style="margin-left: 10px;">View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<!-- <div class="container footer navbar-fixed-bottom">
+<footer id="footer" class="footer">
+    <div class="container">
+        <span>All Rights Reserved 2021 @BenzeyanSafouan</span>
+    </div>
+  </footer>
+</div> -->

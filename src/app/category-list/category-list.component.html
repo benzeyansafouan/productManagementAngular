@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a routerLink="" routerLinkActive="active" class="nav-link">Category List</a>
+        </li>
+        </ul>
+</nav>
+
+
+<div class="list-group">
+    <button  *ngFor ="let category of categories" type="button" class="list-group-item list-group-item-action" (click)="productlist(category.nameCategory)"> {{ category.nameCategory }}</button>
+    <router-outlet></router-outlet>
+    <button (click)="addCategory()" type="button" class="list-group-item list-group-item-action">+Add Category</button>
+    
+</div>   
+<footer class="footer">
+    <div class="container">
+        <span>All Rights Reserved 2021 @BenzeyanSafouan</span>
+    </div>
+  </footer>
+

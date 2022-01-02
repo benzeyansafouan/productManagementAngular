@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a routerLink="" routerLinkActive="active" class="nav-link">Category List</a>
+        </li>
+        </ul>
+</nav>
+<div class="col-md-6 offset-md-3">
+    <h3>Update Product</h3>
+
+    <form (ngSubmit) ="onSubmit()">
+
+        <div class="form-group">
+            <label>Product Name</label>
+            <input [disabled]="true" type="text" class="form-control" id="ProductName" 
+            [(ngModel)]= "product.name_Products" name="productName">
+        </div>
+
+        <div class="form-group">
+            <label>Category</label>
+            <input type="text" class="form-control" id="category" 
+            [(ngModel)]= "product.nameCategory" name="category">
+            </div>
+
+        <br>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+    </div>
